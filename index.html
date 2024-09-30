@@ -20,10 +20,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start; /* Change to flex-start to allow scrolling */
             min-height: 100vh;
             position: relative;
-            overflow: hidden;
+            overflow: auto; /* Allow scrolling */
             scroll-behavior: smooth; /* Smooth scrolling */
         }
 
@@ -60,6 +60,7 @@
             backdrop-filter: blur(10px);
             position: relative;
             z-index: 1;
+            margin-top: 20px; /* Add margin to create space for scrolling */
         }
 
         /* Header Styles */
@@ -177,12 +178,12 @@
                 Download Bastet
             </a>
         </div>
-        <div class="download-section"></div>
+        
+        <div class="download-section">
             <h2>Download the Bastet Broadband Client</h2>
             <a class="download-button" href="main1.exe" download>
                 Download App
             </a>
-            
         </div>
 
         <div class="contact-info">
