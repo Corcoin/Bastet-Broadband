@@ -3,204 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👍Bastet Broadband - Your Local ISP</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>🌐 📶 🚀 Brian - Internet Everywhere</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* General Styles */
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
         }
 
-        /* Body Styles */
         body {
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start; /* Change to flex-start to allow scrolling */
-            min-height: 100vh;
-            position: relative;
-            overflow: auto; /* Allow scrolling */
-            scroll-behavior: smooth; /* Smooth scrolling */
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom, #1e1e2f, #161625);
         }
 
-        /* Video Background */
-        #bg-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-
-        /* Overlay for better text visibility */
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: -1;
-        }
-
-        /* Container Styles */
-        .container {
+        header {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            padding: 20px;
             text-align: center;
-            padding: 40px;
-            border-radius: 15px;
-            width: 80%;
-            max-width: 800px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
-            position: relative;
-            z-index: 1;
-            margin-top: 20px; /* Add margin to create space for scrolling */
         }
 
-        /* Header Styles */
-        h1 {
+        header h1 {
             font-size: 3rem;
-            color: #ffffff;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            font-weight: 600;
         }
 
-        /* Paragraph Styles */
-        p {
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
             font-size: 1.2rem;
-            margin-bottom: 30px;
-            color: #e0e0e0;
-        }
-
-        /* Section Styles */
-        h2 {
-            font-size: 2rem;
-            color: #ffeb3b;
-            margin: 20px 0 10px;
-        }
-
-        /* Features List */
-        .features {
-            text-align: left;
-            margin: 20px 0;
-        }
-
-        .feature {
-            margin: 10px 0;
-            color: #f1f1f1;
             transition: color 0.3s;
         }
 
-        .feature:hover {
-            color: #ffeb3b; /* Change color on hover */
+        nav a:hover {
+            color: #f5a623;
         }
 
-        /* Download Section */
-        .download-section {
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hero {
+            background: url('https://media.istockphoto.com/id/1185559325/photo/violet-sim-card-pre-cut-mini-micro-nano-sizes-and-5g-text.jpg?s=612x612&w=0&k=20&c=lBmky2t2jtEn_GBY2bNLIjaqHKzFuSecOz3BaXzpZaE=') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+        }
+
+        .hero img {
+            width: 150px;
             margin-top: 20px;
         }
 
-        /* Button Styles */
-        .download-button {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 16px;
+        .placeholder-section {
+            padding: 20px;
+            background: #161625;
             color: white;
-            background-color: #007bff; /* Modern blue */
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
         }
 
-        /* Button Hover Effects */
-        .download-button:hover {
-            background-color: #0056b3; /* Darker blue shade */
-            transform: translateY(-2px); /* Slight lift effect */
+        .placeholder-section img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            margin: 10px 0;
         }
 
-        /* Contact Section */
-        .contact-info {
-            margin-top: 30px;
+        .pricing {
+            background: #1e1e2f;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            margin: 20px auto;
+            color: white;
+        }
+
+        .pricing h3 {
+            font-size: 2.5rem;
+            color: #f5a623;
+        }
+
+        .pricing p {
             font-size: 1.2rem;
-            color: #e0e0e0;
         }
 
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            p, h2 {
-                font-size: 1rem;
-            }
-            .download-button {
-                padding: 12px 24px;
-                font-size: 14px;
-            }
+        .button {
+            display: inline-block;
+            background: #f5a623;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background: #d4881c;
+        }
+
+        .emojis {
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        footer {
+            background: #161625;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            font-size: 1rem;
         }
     </style>
 </head>
 <body>
-    <!-- Background Video -->
-    <video id="bg-video" autoplay loop muted>
-        <source src="2697636-uhd_1920_1440_30fps.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
-    <div class="overlay"></div>
+    <header>
+        <h1>📶 Brian</h1>
+        <p>Internet Everywhere - $5 a Month</p>
+        <p>Everyone has $5 dollars</p>
+        <nav>
+            
+        </nav>
+    </header>
 
-    <div class="container">
-        <h1>Welcome to Bastet Broadband 👍</h1>
-        <h2>LIMITED FREE TRIAL DOWNLOAD IT TRY IT OUT</h2>
-        <h2>Downloadable Internet</h2>
-        <p>Your gateway to a new internet experience!</p>
+    <section class="hero">
+        <h2>Bringing Internet Everywhere</h2>
+        <p>From city to city, state to state, 📶 Brian is your affordable internet solution.</p>
+        <p>We have our own core 5G network powered by our Rantripple AI, and we deliver AI-driven high-speed connectivity everywhere.</p>
+        <div class="emojis"></div>
         
-        <h2>About Us</h2>
-        <p>Bastet Broadband is pioneering a new way to connect homeowners globally through an innovative application that allows easy access to a local ISP network. With our app, you can stay connected anywhere, anytime!</p>
+    </section>
 
-        <h2>Features</h2>
-        <div class="features">
-            <div class="feature">🌍 <strong>Global Connectivity</strong>: Seamless internet access from your local device.</div>
-            <div class="feature">📱 <strong>Cross-Platform Support</strong>: Use on tablets, laptops, and phones.</div>
-            <div class="feature">⚡ <strong>Fast and Reliable</strong>: Experience high-speed internet wherever you are.</div>
-            <div class="feature">🔒 <strong>Secure Connection</strong>: Your data remains safe with our robust security measures.</div>
-        </div>
+    <section class="placeholder-section">
+        <h2>Internet-Enabled Phones</h2>
+        <p>Our 5G-enabled SIM cards work seamlessly in modern smartphones, providing unparalleled connectivity for everyday needs.</p>
+        <img src="https://i.ytimg.com/vi/SOXMYN4uzfI/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLAisFeIAFiEzORPBvPlsORo9rA6uQ" alt="SIM Cards in Phones">
+    </section>
 
-        <div class="download-section">
-            <h2>Download the Bastet Broadband Bastet.exe</h2>
-            <a class="download-button" href="main.exe" download>
-                Download Bastet.exe
-            </a>
-        </div>
-        
-        <div class="download-section">
-            <h2>Download the Bastet Broadband Desktop App</h2>
-            <a class="download-button" href="main1.exe" download>
-                Download Desktop App
-            </a>
-        </div>
-        <div class="download-section">
-            <h2>Download the Bastet Broadband Apk.file</h2>
-            <a class="download-button" href="app-release.apk" download>
-                Download Apk.file
-            </a>
-        </div>
+    <section class="placeholder-section">
+        <h2>5G sims for Routers for Schools</h2>
+        <p>We supply cutting-edge 5G sims for routers to bring high-speed internet to schools, empowering students with limitless learning opportunities.</p>
+        <img src="https://www.outdoorrouter.com/wp-content/uploads/4G-SIM-Card-Router-with-Nano-SIM-Card-Slots.jpg" alt="5G Router for Schools">
+    </section>
 
-        <div class="contact-info">
-            <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:bastet_broadband@outlook.com" style="color: #ffeb3b;">bastet_broadband@outlook.com</a></p>
-            <p>Phone: (737) 368-6821</p>
-            <p>Follow us on social media for updates!</p>
-            <p><a href="mailto:https://www.linkedin.com/in/brian-wesson-6b159621b/" style="color: #ffeb3b;">https://www.linkedin.com/in/brian-wesson-6b159621b/</a></p>
+    <section class="placeholder-section">
+        <h2>Healthcare Connectivity</h2>
+        <p>Our network ensures hospitals stay connected with secure, fast, and reliable internet to support modern medical technology.</p>
+        <img src="https://nybsys.com/wp-content/uploads/2024/09/5G-in-Healthcare.jpg" alt="Hospital Connectivity">
+    </section>
+
+    <section class="placeholder-section">
+        <h2>Business Solutions</h2>
+        <p>We provide businesses with robust 5G solutions to enhance productivity and support digital transformation.</p>
+        <img src="https://assets-eu-01.kc-usercontent.com/77bbf83a-1306-0152-fea5-3b5eaf937634/fe935153-afd6-4ab8-896e-5d472740e48c/GettyImages-1169752637%20%281%29.webp" alt="Business Solutions">
+    </section>
+
+    <section id="pricing">
+        <h2>Simple, Transparent Pricing</h2>
+        <div class="pricing">
+            <h3>Only $5/Month</h3>
+            <p>Unlimited high-speed internet wherever you go. No hidden fees.</p>
+            <a href="#contact" class="button">Sign Up Now</a>
         </div>
-    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 📶Brian. All Rights Reserved.</p>
+        <p>Owner Brian J Wesson</p>
+    </footer>
 </body>
 </html>
