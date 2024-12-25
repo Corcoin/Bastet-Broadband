@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Order</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>📶 Brian - Customer Portal</h1>
+    </header>
+
+    <main class="container">
+        <section class="order-form">
+            <h2>Make a Purchase Order</h2>
+            <form id="orderForm" action="/submit-order" method="POST">
+                <div class="form-group">
+                    <label for="product">Product Type</label>
+                    <select name="product" id="product" required>
+                        <option value="sim-card">SIM Card</option>
+                        <option value="esim">eSIM</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" name="quantity" id="quantity" min="1" placeholder="Enter quantity" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="account-number">Account Number</label>
+                    <input type="text" name="accountNumber" id="account-number" placeholder="Enter account number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="routing-number">Routing Number</label>
+                    <input type="text" name="routingNumber" id="routing-number" placeholder="Enter routing number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Amount to Charge (Calculated Automatically)</label>
+                    <input type="number" id="amount" name="amount" readonly>
+                </div>
+
+                <button type="submit" class="btn">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Brian. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const quantityInput = document.getElementById('quantity');
+        const amountInput = document.getElementById('amount');
+        const pricePerUnit = 10; // Example price per SIM/eSIM
+
+        quantityInput.addEventListener('input', () => {
+            const quantity = parseInt(quantityInput.value, 10) || 0;
+            amountInput.value = quantity * pricePerUnit;
+        });
+    </script>
+</body>
+</html>
